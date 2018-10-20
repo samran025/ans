@@ -1,0 +1,3 @@
+---
+ - name: mkdir
+   shell: mkdir $HOME/ans

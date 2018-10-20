@@ -1,0 +1,8 @@
+---
+ - hosts: default
+   become: yes
+   become_user: "{{ user }}"
+   gather_facts: yes
+   roles:
+    - deploy
+
