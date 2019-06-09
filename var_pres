@@ -1,0 +1,12 @@
+
+run.sh~:#ansible-playbook -i ansible_hosts --extra-vars="env=${ENV} var1='var_run'" all.yml
+ansible_hosts~:#localhost_qa ansible_host=localhost ansible_connection=local var1='run_inv'
+run.sh:ansible-playbook -i ansible_hosts --extra-vars="env=${ENV} var1='var_run'" all.yml
+ansible_hosts:localhost_qa ansible_host=localhost ansible_connection=local var1='run_inv'
+roles/deploy/tasks/main.yml:   debug: "msg={{var1}}"
+group_vars/QA/main.yml:var1: "var_main"
+group_vars/QA/main.yml~:#var1: "var_main"
+group_vars/all.yml:var1: "var_all"
+
+
+run.sh > inv > group_var/main > group_var/all
